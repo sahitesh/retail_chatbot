@@ -1,47 +1,61 @@
 # from openai import OpenAI
 import streamlit as st
 from mistralai import Mistral
+import requests
 import json
+from langchain_mistralai import ChatMistralAI
+from langchain_core.prompts import ChatPromptTemplate
+from tools import customer_details, all_transaction_details, general_inquiry, policy_documents
+from system_prompts import SYSTEM_PROMPT_TEMPLATE
+import os
+import random
+
+customer_id = "CUST0{:02d}".format(random.randint(1, 20))
+
+llm = ChatMistralAI(
+    model="mistral-large-latest",
+    temperature=0,
+    max_retries=2,
+    max_tokens=150,
+    top_p=1,
+    frequency_penalty=0,
+    presence_penalty=0,
+)
 
 secrets = json.load(open("secrets.json"))
-api_key = secrets["mistral_api_key"]
-model = "mistral-large-latest"
+os.environ["MISTRAL_API_KEY"] = secrets["mistral_api_key"]
 
-client = Mistral(api_key=api_key)
+tools = [customer_details, all_transaction_details, general_inquiry, policy_documents]
 
-# with st.sidebar:
-#     openai_api_key = st.text_input("OpenAI API Key", key="chatbot_api_key", type="password")
-#     "[Get an OpenAI API key](https://platform.openai.com/account/api-keys)"
-#     "[View the source code](https://github.com/streamlit/llm-examples/blob/main/Chatbot.py)"
-#     "[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/llm-examples?quickstart=1)"
+prompt = ChatPromptTemplate.from_messages(
+    [
+        (
+            "system",
+            SYSTEM_PROMPT_TEMPLATE,
+        ),
+        ("placeholder", "{msgs}"),
+    ]
+)
 
+prompt.format(customer_id=customer_id)
+llm_with_tools = llm.bind_tools(tools)
 
-import requests
+llm_with_tools = prompt | llm
 
 
 st.title("💬 Chatbot")
 st.caption("🚀 A Streamlit chatbot powered by Mistral")
 if "messages" not in st.session_state:
-    st.session_state["messages"] = [{"role": "assistant", "content": "How can I help you?"}]
+    st.session_state["messages"] = [{"role": "assistant", "content": f"How can I help you, {customer_details(customer_id)["name"]}?"}]
 
 for msg in st.session_state.messages:
     st.chat_message(msg["role"]).write(msg["content"])
 
 if prompt := st.chat_input():
-    # if not openai_api_key:
-    #     st.info("Please add your OpenAI API key to continue.")
-    #     st.stop()
-
-    # client = OpenAI(api_key=openai_api_key)
-    client = Mistral(api_key=api_key)
     
     st.session_state.messages.append({"role": "user", "content": prompt})
     st.chat_message("user").write(prompt)
-    # response = client.chat.completions.create(model="gpt-3.5-turbo", messages=st.session_state.messages)
-    response = client.chat.complete(
-    model = model,
-    messages = st.session_state.messages
-    )
-    msg = response.choices[0].message.content
+    response = llm_with_tools.invoke({"customer_id":customer_id, "msgs":st.session_state.messages})
+    msg = response.content
     st.session_state.messages.append({"role": "assistant", "content": msg})
     st.chat_message("assistant").write(msg)

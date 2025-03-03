@@ -5,3 +5,4 @@ Faker==36.1.1
 datetime==5.5
 mistralai==1.5.0 
 streamlit==1.42.2
+langchain_mistralai==0.2.7
