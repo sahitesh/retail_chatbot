@@ -1,0 +1,8 @@
+## misc
+
+/.venv
+/.vscode
+*.ipynb_checkpoints
+/experiments/.ipynb_checkpoints/
+/.pytest_cache
+secrets.json
