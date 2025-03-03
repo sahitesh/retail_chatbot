@@ -7,3 +7,4 @@
 /.pytest_cache
 secrets.json
 .DS_Store
+__pycache__/
