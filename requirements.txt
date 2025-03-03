@@ -1,2 +1,5 @@
 jupyter==1.1.1
 notebook==7.3.2
+pandas==2.2.3
+Faker==36.1.1
+datetime==5.5

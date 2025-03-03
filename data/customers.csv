@@ -1,0 +1,21 @@
+customer_id,name,email,phone,location,subscription_plan,registration_date,subscription_start_date,subscription_end_date
+CUST001,Anthony Mcmahon,sanchezcindy@example.com,(415) 704-2388,"Youngland, MT",,2023-12-28,,
+CUST002,Stephen Watts,robinsonmaria@example.net,(715) 499-9230,"South Emmafurt, NJ",Platinum,2024-08-14,2024-09-27,2025-09-27
+CUST003,Ryan Beck,wilcoxvanessa@example.org,(601) 236-1959,"Lake Joseph, ID",Gold,2023-02-28,2023-09-13,2024-09-12
+CUST004,Mark Brown,richardsonjennifer@example.net,(771) 743-7454,"Hoffmanburgh, ID",Gold,2024-11-26,2025-10-07,2026-10-07
+CUST005,Michael Hamilton,petersmelanie@example.net,(924) 745-3480,"New Mariafort, IA",,2023-08-29,,
+CUST006,Gene Myers,tmartin@example.net,(584) 281-9540,"Josephland, DC",Platinum,2024-02-25,2024-04-08,2025-04-08
+CUST007,Richard Best,katieweaver@example.org,(802) 628-0867,"Richardstad, UT",Bronze,2024-09-09,2025-07-18,2026-07-18
+CUST008,Mrs. Rita Jordan,yvonne48@example.com,(086) 173-2538,"Wilsonbury, CA",Platinum,2022-03-07,2022-07-23,2023-07-23
+CUST009,Rebecca Reynolds,tiffany97@example.com,(536) 538-8947,"South Eric, WA",Platinum,2024-08-04,2025-01-03,2026-01-03
+CUST010,Jacob Jones,bauerjessica@example.com,(444) 251-3993,"Brianville, TN",Gold,2023-05-30,2023-11-17,2024-11-16
+CUST011,Dylan Horne Jr.,michaelgray@example.com,(860) 713-0133,"East Kevin, NH",Gold,2024-12-23,2025-12-13,2026-12-13
+CUST012,Megan Wilson,paulwhite@example.com,(795) 460-4831,"South Lisaport, GA",Platinum,2022-08-20,2022-12-14,2023-12-14
+CUST013,Kimberly Johnson,jessicacollins@example.org,(201) 614-7574,"Lake Jessicaborough, GU",Platinum,2024-12-31,2025-10-15,2026-10-15
+CUST014,Dana Nelson,wileyjames@example.net,(978) 913-3026,"Scottside, LA",Platinum,2024-07-20,2024-10-02,2025-10-02
+CUST015,Victoria Marks,christophermoody@example.net,(580) 668-8323,"Martinezshire, MO",Bronze,2024-03-23,2024-10-29,2025-10-29
+CUST016,Jason Rivera,darleneking@example.com,(341) 134-0085,"Robertfort, WI",Bronze,2024-12-16,2025-10-04,2026-10-04
+CUST017,James Conrad,christie18@example.com,(333) 288-0925,"Smithmouth, CO",Bronze,2023-06-02,2024-05-08,2025-05-08
+CUST018,Susan Garcia,william64@example.org,(586) 799-0056,"Taylorhaven, FM",Gold,2024-09-30,2024-10-24,2025-10-24
+CUST019,Andrew Baker,usanchez@example.com,(416) 705-2639,"Port David, DC",,2024-04-11,,
+CUST020,Michael Johnson,jaimechapman@example.org,(723) 570-5845,"Geraldhaven, HI",Gold,2024-02-07,2025-01-24,2026-01-24

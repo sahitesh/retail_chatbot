@@ -1,0 +1,4 @@
+subscription_plan,subscription_amount,number_of_people_registered,benefits
+Bronze,29.99,4,"Basic access to services, limited features"
+Gold,59.99,6,"Premium access, additional features, priority support"
+Platinum,99.99,7,"All features included, exclusive offers, VIP support"
