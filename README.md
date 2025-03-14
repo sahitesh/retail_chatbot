@@ -6,6 +6,12 @@
 2. create a virtualenv in the repo. (virtualenv .venv)
 3. source .venv/bin/activate
 4. pip install -r requirements.txt
+5. Start Phoenix for Tracing 
+    phoenix serve  
+6. Run the Chatbot
+    streamlit run chatbot.py  
+    
+
 
 
 ## Objective

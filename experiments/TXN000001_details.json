@@ -1,0 +1,36 @@
+{
+    "transaction_id": "TXN000001",
+    "customer_id": "CUST001",
+    "transaction_date": "2025-01-21",
+    "products_in_order": [
+        {
+            "product_id": 88837,
+            "product_name": "Women Product 88837",
+            "quantity": 4,
+            "item_cost": 783.54,
+            "total_item_cost": 3134.16
+        },
+        {
+            "product_id": 95049,
+            "product_name": "Decor Product 95049",
+            "quantity": 4,
+            "item_cost": 53.46,
+            "total_item_cost": 213.84
+        },
+        {
+            "product_id": 81247,
+            "product_name": "Women Product 81247",
+            "quantity": 2,
+            "item_cost": 936.61,
+            "total_item_cost": 1873.22
+        },
+        {
+            "product_id": 24317,
+            "product_name": "Decor Product 24317",
+            "quantity": 1,
+            "item_cost": 311.3,
+            "total_item_cost": 311.3
+        }
+    ],
+    "total_transaction_cost": 5532.52
+}
